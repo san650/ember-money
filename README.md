@@ -7,6 +7,8 @@ Money value type for Ember
 
 This addon helps you implement the "Money" concept in your application.
 
+In certain application domains is useful to have the value type money where a value `0.001` is considered as `0.00` because the minimum value is `0.01`. If you try to split `0.03` in two, you should have two equal parts of `0.01` and a `0.01` as the remainder. This addon helps you with this kind of domain specific requirements.
+
 ```js
 money('1.234') == '1.23'
 money(0.009) == '0.00'
