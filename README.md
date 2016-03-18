@@ -1,17 +1,37 @@
-# Ember-money
+# ember-money
 
-This README outlines the details of collaborating on this Ember addon.
+[![Build Status](https://travis-ci.org/san650/ember-money.svg?branch=master)](https://travis-ci.org/san650/ember-money)
+![Latest version](https://img.shields.io/npm/v/ember-money.svg)
+
+Money value type for Ember
+
+This addon helps you implement the "Money" concept in your application.
+
+```js
+money('1.234') == '1.23'
+money(0.009) == '0.00'
+money(1.009) == '1.00'
+money(1).sum(money(0.02)) == '1.02'
+money(0.001).sum(money(0.009)) == '0.00'
+money(1.001).sum(money(1.009)) == '2.00'
+```
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```sh
+ember install ember-money
+```
 
-## Running
+## Development
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+### Installation
+
+```sh
+$ git clone https://github.com/san650/ember-money.git
+$ cd $_
+$ npm install
+$ bower install
+```
 
 ## Running Tests
 
@@ -19,8 +39,12 @@ This README outlines the details of collaborating on this Ember addon.
 * `ember test`
 * `ember test --server`
 
-## Building
+### Project's health
 
-* `ember build`
+[![Build Status](https://travis-ci.org/san650/ember-money.svg?branch=master)](https://travis-ci.org/san650/ember-money)
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+## License
+
+ember-money is licensed under the MIT license.
+
+See [LICENSE](./LICENSE.md) for the full license text.
